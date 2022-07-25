@@ -1,4 +1,3 @@
-package com.rajeev;
 
 public class StackMain extends CustomStack {
 
@@ -16,7 +15,7 @@ public class StackMain extends CustomStack {
         System.out.println(stack.pop());
         System.out.println(stack.pop());
         System.out.println(stack.pop());
-//        System.out.println(stack.pop());
+        // System.out.println(stack.pop());
 
     }
 }
