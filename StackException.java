@@ -1,7 +1,6 @@
-package com.rajeev;
 
 public class StackException extends Exception {
-    public StackException(String message){
+    public StackException(String message) {
         super(message);
     }
 }

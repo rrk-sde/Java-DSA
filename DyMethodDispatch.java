@@ -1,20 +1,20 @@
-package com.rajeev;
-class Super{
-    void myth1(){
+
+class Super {
+    void myth1() {
         System.out.println("Super: Myth one");
     }
 
-    void myth2(){
+    void myth2() {
         System.out.println("Super: Myth Two");
     }
 }
 
-class Sub extends Super{
-    void myth2(){
+class Sub extends Super {
+    void myth2() {
         System.out.println("sub: Myth 2");
     }
 
-    void myth3(){
+    void myth3() {
         System.out.println("sub: Myth 3");
     }
 }

@@ -1,55 +1,52 @@
-package com.rajeev;
-
-import java.sql.SQLOutput;
 
 public class CustomStack {
 
     protected int[] data;
-    private static final int DEFAULT_SIZE =10;
+    private static final int DEFAULT_SIZE = 10;
 
-    int ptr =-1;
+    int ptr = -1;
 
-    public CustomStack(){
+    public CustomStack() {
         this(DEFAULT_SIZE);
     }
 
-    public CustomStack(int size){
+    public CustomStack(int size) {
         this.data = new int[size];
     }
 
-    public boolean push(int item){
-        if(isFull()){
+    public boolean push(int item) {
+        if (isFull()) {
             System.out.println("Stack Is Full");
             return false;
         }
 
         ptr++;
-        data[ptr]=item;
+        data[ptr] = item;
         return true;
     }
 
-    public int pop()  throws  StackException{
-        if(isEmpty()){
+    public int pop() throws StackException {
+        if (isEmpty()) {
             throw new StackException("cant pop from this empty stack");
         }
-//        int removed = data[ptr];
-//        ptr--;
-//        return removed;
+        // int removed = data[ptr];
+        // ptr--;
+        // return removed;
         return data[ptr--];
     }
 
-    public int peek() throws StackException{
-        if(isEmpty()){
+    public int peek() throws StackException {
+        if (isEmpty()) {
             throw new StackException("cant peek from this empty stack");
         }
         return data[ptr];
     }
 
-    private boolean isFull(){
-        return ptr ==data.length-1;
+    private boolean isFull() {
+        return ptr == data.length - 1;
     }
 
-    private boolean isEmpty(){
-        return ptr ==-1;
+    private boolean isEmpty() {
+        return ptr == -1;
     }
 }
