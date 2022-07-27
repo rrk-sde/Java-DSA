@@ -1,15 +1,21 @@
 
 class Test extends Thread {
     public void run() {
-        System.out.println("Inside Test Thread");
+        for (int i = 0; i < 5; i++) {
+            System.out.println("Inside Test Thread");
+        }
     }
 }
 
 public class Multithread {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Test t1 = new Test();
         t1.start();
-        System.out.println("Inside Main Thread");
+        for (int i = 0; i < 5; i++) {
+            System.out.println("Inside Main Thread");
+            Thread.sleep(1);
+        }
+
     }
 
 }
