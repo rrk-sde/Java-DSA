@@ -44,8 +44,9 @@ public class PracticeQuickSort {
         }
 
         int p = Partition(arr, firsti, lasti);
-        QuickSort(arr, firsti, p - 1);
+
         QuickSort(arr, p + 1, lasti);
+        QuickSort(arr, firsti, p - 1);
 
     }
 
