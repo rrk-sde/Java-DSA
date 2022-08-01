@@ -1,11 +1,11 @@
 public class PracticeQuickSort {
-    static void swap(int[] arr, int i, int j) {
-        int temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
-    }
+    // static void swap(int[] arr, int i, int j) {
+    // int temp = arr[i];
+    // arr[i] = arr[j];
+    // arr[j] = temp;
+    // }
 
-    static int Partition(int arr[], int firsti, int lasti) {
+    public static int Partition(int arr[], int firsti, int lasti) {
         int pivot = arr[firsti];
         int count = 0;
         int i = firsti, j = lasti;
@@ -15,38 +15,41 @@ public class PracticeQuickSort {
             if (arr[k] <= pivot) {
                 count++;
             }
-
         }
-
         int pivoti = firsti + count;
 
-        swap(arr, arr[pivoti], arr[firsti]);
+        // swap(arr, arr[pivoti], arr[firsti]);
+
+        int temp = arr[pivoti];
+        arr[pivoti] = arr[firsti];
+        arr[firsti] = temp;
 
         while (i < pivoti && j > pivoti) {
             while (arr[i] <= pivot) {
                 i++;
             }
-
             while (arr[j] > pivot) {
                 j--;
             }
 
             if (i < j) {
-                swap(arr, arr[i++], arr[j--]);
+                // swap(arr, arr[i++], arr[j--]);
+                int temp2 = arr[i++];
+                arr[i++] = arr[j--];
+                arr[j--] = temp2;
             }
         }
         return pivoti;
     }
 
-    static void QuickSort(int arr[], int firsti, int lasti) {
+    public static void QuickSort(int arr[], int firsti, int lasti) {
         if (firsti >= lasti) {
             return;
         }
 
         int p = Partition(arr, firsti, lasti);
-
-        QuickSort(arr, p + 1, lasti);
         QuickSort(arr, firsti, p - 1);
+        QuickSort(arr, p + 1, lasti);
 
     }
 
