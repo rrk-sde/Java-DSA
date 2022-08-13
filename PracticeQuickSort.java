@@ -54,7 +54,7 @@ public class PracticeQuickSort {
     }
 
     public static void main(String[] args) {
-        int arr[] = { 3, 6, 2, 1, 0, 5, 11, 8 };
+        int arr[] = { 3, 6, 2, 11, 0, 5, 11, 8 };
         QuickSort(arr, 0, 6);
 
         for (int x : arr) {
