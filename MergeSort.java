@@ -43,7 +43,7 @@ public class MergeSort {
     }
 
     public static void main(String[] args) {
-        int arr[] = { 3, 5, 12, 2, 1, 5, 11, 8, 38, 2 };
+        int arr[] = { 3, 5, 12, 2, 1, 5, 11, 8, 8, 2 };
         int n = arr.length;
         divide(arr, 0, n - 1);
         for (int x : arr) {
