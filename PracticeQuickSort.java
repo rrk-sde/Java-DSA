@@ -1,9 +1,4 @@
 public class PracticeQuickSort {
-    // static void swap(int[] arr, int i, int j) {
-    // int temp = arr[i];
-    // arr[i] = arr[j];
-    // arr[j] = temp;
-    // }
 
     public static int Partition(int arr[], int firsti, int lasti) {
         int pivot = arr[firsti];
